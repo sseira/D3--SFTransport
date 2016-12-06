@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Explore SF Transit</title>
+    <link rel='stylesheet' href='materialize/css/materialize.css'>
+    <link rel='stylesheet' href='materialize/css/main.css'>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <h1 class="brand-logo center">Transit Exploration Tool - San Francisco</h1>
+            </div>
+        </nav>
+    </div>
+    <div class="row fill">
+        <div class="col s9 fill">
+            <!-- Teal page content  -->
+            <div id="map"></div>
+        
+            <div id="container" style="padding-left: 30px; float:left;">
+                <h3> Days of Week Filter </h3>
+                <div class='day-checkbox'>
+                    <input type="checkbox" id="Monday" checked/>
+                    <label for="Monday"></label>
+                    <div class="day-label">Mon.</div>
+                </div>
+                 <div class='day-checkbox' style="float: left">                     
+                    <input type="checkbox" id="Tuesday" checked/>
+                    <label for="Tuesday"></label>
+                    <div class="day-label">Tues.</div>
+                </div>
+                 <div class='day-checkbox' style="float: left">
+                    <input type="checkbox" id="Wednesday" checked/>
+                    <label for="Wednesday"></label>
+                    <div class="day-label">Wed.</div>
+                </div>
+                 <div class='day-checkbox' style="float: left">
+                    <input type="checkbox" id="Thursday" checked/>
+                    <label for="Thursday"></label>
+                     <div class="day-label">Thurs.</div>
+                </div>
+                 <div class='day-checkbox' style="float: left">
+                    <input type="checkbox" id="Friday" checked/>
+                    <label for="Friday"></label>
+                    <div class="day-label">Fri.</div>
+                </div>
+                 <div class='day-checkbox' style="float: left">
+                    <input type="checkbox" id="Saturday" checked/>
+                    <label for="Saturday"></label>
+                    <div class="day-label">Sat.</div>
+                </div>
+                 <div class='day-checkbox' style="float: none">
+                    <input type="checkbox" id="Sunday" checked/>
+                    <label for="Sunday"></label>
+                    <div class="day-label">Sun.</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col s3 fill">
+            <!-- Grey navigation panel -->
+            <form action="#">
+                <h3> Location Selectors </h3>
+                <p>
+                    <div>       
+                        <span class="map-icon map-icon-circle" style="color: #75ABBC"></span>
+                        <input id="pac-input1" class="controls searchbox" type="text" placeholder="Place 1">
+                    </div>
+                </p>
+                <p>
+                    <div>
+                        <span class="map-icon map-icon-circle" style="color: #6AABA2"></span>     
+                        <input id="pac-input2" class="controls searchbox" type="text" placeholder="Place 2">
+                    </div>
+                </p>
+                
+            </form>
+        </div>
+    </div>
+    <script type='text/javascript' src='jquery-1.12.3.min.js'></script>
+    <script type='text/javascript' src='materialize/js/materialize.js'></script>
+    <!-- <script type="text/javascript" src='wnumb-1.0.2/wNumb.js'></script> -->
+    <script type="text/javascript" src="d3.v3.js"></script>
+    <script type="text/javascript" src="SFMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-eM4xjHsVZ25wKuIG1PxCQkEs7WTMkeg&callback=initMap&libraries=places" async defer>
+    </script>
+</body>
+
+</html>
