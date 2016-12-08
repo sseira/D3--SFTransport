@@ -1,0 +1,639 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "zzzz-zzzz",
+      "name" : "Off-street parking lots and parking garages map",
+      "attribution" : "SFMTA, SFpark",
+      "attributionLink" : "http://sfpark.org/resources/off-street-parking-census-gis-data/",
+      "averageRating" : 0,
+      "category" : "Transportation",
+      "description" : "Publicly available off-street parking in San Francisco as of September 2011. Find attached a data dictionary, a version of the map as a PDF (symbolized to show garage type and capacity of garage), and a shapefile and CSV of the data. This dataset includes location, capacities, and related details of public parking garages and lots; four parking categories: paid, publicly available (PPA): drive up and pay, typically by the hour or by the day; customer parking only (CPO): typically for businesses or religious institutions; permit holder only (PHO, CGO): i.e. employees only, students only, monthly only; free publicly available (FPA): free off-street parking. The data does not contain off-street residential parking spaces or other unmarked ���private�۝ parking.",
+      "displayType" : "map",
+      "downloadCount" : 0,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1442441458,
+      "licenseId" : "PDDL",
+      "moderationStatus" : true,
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 0,
+      "publicationAppendEnabled" : false,
+      "publicationStage" : "published",
+      "rowClass" : "",
+      "rowsUpdatedAt" : 1335766657,
+      "rowsUpdatedBy" : "zn8n-8wyr",
+      "tableId" : 330454,
+      "totalTimesRated" : 0,
+      "viewCount" : 0,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 10424243,
+        "name" : "Owner",
+        "dataTypeName" : "text",
+        "fieldName" : "owner",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 2714195,
+        "width" : 160,
+        "format" : { }
+      }, {
+        "id" : 10424244,
+        "name" : "Address",
+        "dataTypeName" : "text",
+        "fieldName" : "address",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 2714196,
+        "width" : 184,
+        "format" : { }
+      }, {
+        "id" : 10424245,
+        "name" : "PrimeType",
+        "dataTypeName" : "text",
+        "fieldName" : "primetype",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 2714197,
+        "width" : 208,
+        "format" : { }
+      }, {
+        "id" : 10424246,
+        "name" : "SecondType",
+        "dataTypeName" : "text",
+        "fieldName" : "secondtype",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 2714198,
+        "width" : 220,
+        "format" : { }
+      }, {
+        "id" : 10424247,
+        "name" : "GarOrLot",
+        "dataTypeName" : "text",
+        "fieldName" : "garorlot",
+        "position" : 5,
+        "renderTypeName" : "text",
+        "tableColumnId" : 2714199,
+        "width" : 196,
+        "format" : { }
+      }, {
+        "id" : 10424248,
+        "name" : "RegCap",
+        "dataTypeName" : "number",
+        "fieldName" : "regcap",
+        "position" : 6,
+        "renderTypeName" : "number",
+        "tableColumnId" : 2714200,
+        "width" : 172,
+        "format" : { }
+      }, {
+        "id" : 10424249,
+        "name" : "ValetCap",
+        "dataTypeName" : "number",
+        "fieldName" : "valetcap",
+        "position" : 7,
+        "renderTypeName" : "number",
+        "tableColumnId" : 2714201,
+        "width" : 196,
+        "format" : { }
+      }, {
+        "id" : 10424250,
+        "name" : "MCCap",
+        "dataTypeName" : "number",
+        "fieldName" : "mccap",
+        "position" : 8,
+        "renderTypeName" : "number",
+        "tableColumnId" : 2714202,
+        "width" : 160,
+        "format" : { }
+      }, {
+        "id" : 10424251,
+        "name" : "LANDUSETYP",
+        "dataTypeName" : "text",
+        "fieldName" : "landusetyp",
+        "position" : 9,
+        "renderTypeName" : "text",
+        "tableColumnId" : 2714203,
+        "width" : 220,
+        "format" : { }
+      }, {
+        "id" : 10424252,
+        "name" : "Location 1",
+        "dataTypeName" : "location",
+        "fieldName" : "location_1",
+        "position" : 10,
+        "renderTypeName" : "location",
+        "tableColumnId" : 2714204,
+        "width" : 220,
+        "format" : { },
+        "subColumnTypes" : [ "human_address", "latitude", "longitude", "machine_address", "needs_recoding" ]
+      } ],
+      "displayFormat" : {
+        "viewport" : {
+          "ymin" : 37.767245314572,
+          "xmin" : -122.46493075968,
+          "ymax" : 37.784402490443,
+          "xmax" : -122.42093824031
+        },
+        "plot" : {
+          "locationId" : 2714204
+        },
+        "distinctLegend" : true,
+        "bkgdLayers" : [ {
+          "layerKey" : "World Street Map (ESRI)"
+        } ],
+        "layers" : [ {
+          "options" : {
+            "opacity" : 1
+          },
+          "type" : "tile",
+          "url" : "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+        } ],
+        "type" : "esri",
+        "viewDefinitions" : [ {
+          "uid" : "self",
+          "viewport" : {
+            "ymin" : 37.709174,
+            "xmin" : -122.662661,
+            "ymax" : 37.842415,
+            "xmax" : -122.223208
+          },
+          "plot" : {
+            "locationId" : 2714204
+          },
+          "layers" : [ {
+            "options" : {
+              "opacity" : 1
+            },
+            "type" : "tile",
+            "url" : "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+          } ],
+          "type" : "esri",
+          "plotStyle" : "point"
+        } ],
+        "plotStyle" : "point"
+      },
+      "grants" : [ {
+        "inherited" : true,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "license" : {
+        "name" : "Open Data Commons Public Domain Dedication and License",
+        "termsLink" : "http://opendatacommons.org/licenses/pddl/1.0/"
+      },
+      "metadata" : {
+        "rdfSubject" : "0",
+        "rdfClass" : "",
+        "jsonQuery" : {
+          "where" : {
+            "children" : [ {
+              "subColumn" : "longitude",
+              "columnFieldName" : "location_1",
+              "value" : -122.46737478854,
+              "operator" : "GREATER_THAN"
+            }, {
+              "subColumn" : "longitude",
+              "columnFieldName" : "location_1",
+              "value" : -122.41849421146,
+              "operator" : "LESS_THAN"
+            }, {
+              "subColumn" : "latitude",
+              "columnFieldName" : "location_1",
+              "value" : 37.766292138135,
+              "operator" : "GREATER_THAN"
+            }, {
+              "subColumn" : "latitude",
+              "columnFieldName" : "location_1",
+              "value" : 37.78535566688,
+              "operator" : "LESS_THAN"
+            } ],
+            "operator" : "AND"
+          }
+        },
+        "conditionalFormatting" : [ {
+          "condition" : {
+            "tableColumnId" : 2714197,
+            "_key" : "(2714197|CONTAINS|CPO)",
+            "value" : "CPO",
+            "operator" : "CONTAINS"
+          },
+          "color" : "#6aa84f"
+        }, {
+          "condition" : {
+            "tableColumnId" : 2714197,
+            "_key" : "(2714197|EQUALS|PPA)",
+            "value" : "PPA",
+            "operator" : "EQUALS"
+          },
+          "color" : "#4169e1"
+        }, {
+          "condition" : {
+            "tableColumnId" : 2714197,
+            "_key" : "(2714197|EQUALS|FPA)",
+            "value" : "FPA",
+            "operator" : "EQUALS"
+          },
+          "color" : "#e69138"
+        }, {
+          "condition" : {
+            "tableColumnId" : 2714197,
+            "_key" : "(2714197|EQUALS|CGO)",
+            "value" : "CGO",
+            "operator" : "EQUALS"
+          },
+          "color" : "#990000"
+        }, {
+          "condition" : {
+            "tableColumnId" : 2714197,
+            "_key" : "(2714197|EQUALS|PHO)",
+            "value" : "PHO",
+            "operator" : "EQUALS"
+          },
+          "color" : "#ea9999"
+        } ],
+        "attachments" : [ {
+          "filename" : "OSP_09162011.csv",
+          "assetId" : "",
+          "blobId" : "F9E3B7C4-D33A-49B7-8F16-08FD8602D7D3",
+          "name" : "OSP_09162011.csv"
+        }, {
+          "filename" : "OSP_09162011.zip",
+          "assetId" : "",
+          "blobId" : "CEE55429-2AC8-4FE6-9185-2E04A10B59F4",
+          "name" : "OSP_09162011.zip"
+        }, {
+          "filename" : "OSP_09162011_Data_Dictionary.pdf",
+          "assetId" : "",
+          "blobId" : "14C559D6-9A1D-41EA-9B2D-C9AD626A2622",
+          "name" : "OSP_09162011_Data_Dictionary.pdf"
+        }, {
+          "filename" : "OSP_09162011_Data_Preview.pdf",
+          "assetId" : "",
+          "blobId" : "340DF53D-1EB2-4A52-9A9C-3EED1A321913",
+          "name" : "OSP_09162011_Data_Preview.pdf"
+        } ],
+        "custom_fields" : {
+          "Department Metrics" : {
+            "Publishing Department" : "Municipal Transportation Agency "
+          }
+        },
+        "rowIdentifier" : "0",
+        "availableDisplayTypes" : [ "map", "table", "fatrow", "page" ],
+        "renderTypeConfig" : {
+          "visible" : {
+            "map" : true
+          }
+        }
+      },
+      "query" : {
+        "filterCondition" : {
+          "type" : "operator",
+          "value" : "AND",
+          "children" : [ {
+            "type" : "operator",
+            "value" : "GREATER_THAN",
+            "children" : [ {
+              "columnId" : 10424252,
+              "type" : "column",
+              "value" : "LONGITUDE"
+            }, {
+              "type" : "literal",
+              "value" : "-122.46737478854"
+            } ]
+          }, {
+            "type" : "operator",
+            "value" : "LESS_THAN",
+            "children" : [ {
+              "columnId" : 10424252,
+              "type" : "column",
+              "value" : "LONGITUDE"
+            }, {
+              "type" : "literal",
+              "value" : "-122.41849421146"
+            } ]
+          }, {
+            "type" : "operator",
+            "value" : "GREATER_THAN",
+            "children" : [ {
+              "columnId" : 10424252,
+              "type" : "column",
+              "value" : "LATITUDE"
+            }, {
+              "type" : "literal",
+              "value" : "37.766292138135"
+            } ]
+          }, {
+            "type" : "operator",
+            "value" : "LESS_THAN",
+            "children" : [ {
+              "columnId" : 10424252,
+              "type" : "column",
+              "value" : "LATITUDE"
+            }, {
+              "type" : "literal",
+              "value" : "37.78535566688"
+            } ]
+          } ]
+        }
+      },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "zn8n-8wyr",
+        "displayName" : "Leslie Bienenfeld",
+        "roleName" : "editor",
+        "screenName" : "Leslie Bienenfeld",
+        "rights" : [ "create_datasets", "view_domain", "short_session", "view_goals", "view_dashboards", "view_story", "view_unpublished_story" ]
+      },
+      "tags" : [ "sfmta", "sfpark", "parking", "parking garages", "parking lots", "garages" ],
+      "viewFilters" : {
+        "type" : "operator",
+        "value" : "AND",
+        "children" : [ {
+          "type" : "operator",
+          "value" : "GREATER_THAN",
+          "children" : [ {
+            "columnId" : 10424252,
+            "type" : "column",
+            "value" : "LONGITUDE"
+          }, {
+            "type" : "literal",
+            "value" : "-122.46737478854"
+          } ]
+        }, {
+          "type" : "operator",
+          "value" : "LESS_THAN",
+          "children" : [ {
+            "columnId" : 10424252,
+            "type" : "column",
+            "value" : "LONGITUDE"
+          }, {
+            "type" : "literal",
+            "value" : "-122.41849421146"
+          } ]
+        }, {
+          "type" : "operator",
+          "value" : "GREATER_THAN",
+          "children" : [ {
+            "columnId" : 10424252,
+            "type" : "column",
+            "value" : "LATITUDE"
+          }, {
+            "type" : "literal",
+            "value" : "37.766292138135"
+          } ]
+        }, {
+          "type" : "operator",
+          "value" : "LESS_THAN",
+          "children" : [ {
+            "columnId" : 10424252,
+            "type" : "column",
+            "value" : "LATITUDE"
+          }, {
+            "type" : "literal",
+            "value" : "37.78535566688"
+          } ]
+        } ]
+      },
+      "flags" : [ "unsaved" ]
+    }
+  },
+  "data" : [ [ 1, "C1223E41-1F5A-4500-8006-6D5BE8DA9ED6", 1, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2110 Market St", "PPA", " ", "L", "13", "0", "0", "restaurant", [ null, "37.767378", "-122.429344", null, false ] ]
+, [ 6, "2324AC5F-5410-4B46-AD82-AEE93E071786", 6, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2000 POST ST", "PPA", " ", "G", "304", "0", "0", " ", [ null, "37.785078", "-122.434745", null, false ] ]
+, [ 9, "4436C280-4B6A-4B23-A5E1-3264C8D6F301", 9, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2355 POST ST", "PPA", " ", "L", "50", "0", "0", " ", [ null, "37.78397", "-122.440218", null, false ] ]
+, [ 10, "75D22869-6539-418A-80C4-4F0A8E5BE07E", 10, 1335741454, "401820", 1335741454, "401820", "{\n}", "RPD", "801 STANYAN ST", "PPA", " ", "L", "324", "0", "0", " ", [ null, "37.767202", "-122.453432", null, false ] ]
+, [ 35, "722F2463-4853-488A-99EB-6C1833693AD9", 35, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1515 SCOTT ST", "PPA", " ", "L", "90", "0", "0", " ", [ null, "37.783953", "-122.438111", null, false ] ]
+, [ 45, "3BD2E72C-2D16-4A15-A245-C170631F84F3", 45, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1650 MISSION ST", "PPA", " ", "G", "86", "0", "0", " ", [ null, "37.771641", "-122.419414", null, false ] ]
+, [ 48, "16293B7A-B86B-4675-BBC6-8F441B1597E8", 48, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2186 GEARY BLVD", "PPA", " ", "L", "120", "0", "0", " ", [ null, "37.783669", "-122.43875", null, false ] ]
+, [ 62, "591DBBB0-49D6-404F-824B-571AA077058A", 62, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "350 07TH AVE", "PPA", " ", "L", "79", "0", "0", " ", [ null, "37.781965", "-122.464796", null, false ] ]
+, [ 80, "92C16EF4-6AED-452F-AEFB-535C6A80CAA2", 80, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "601 VAN NESS AVE", "PPA", "PHO", "G", "560", "60", "14", " ", [ null, "37.780913", "-122.420523", null, false ] ]
+, [ 104, "186EB3F0-2B33-452F-9B92-EA5F8CDA58DE", 104, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "45 CASTRO ST", "PPA", " ", "L", "209", "0", "0", " ", [ null, "37.7678", "-122.435021", null, false ] ]
+, [ 106, "2F72CBAF-4973-4561-AC19-8DF97140DB54", 106, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1 FRANKLIN ST", "PPA", " ", "L", "50", "0", "0", " ", [ null, "37.774258", "-122.420836", null, false ] ]
+, [ 107, "A57E1007-4E73-4BE7-981E-E61856DF0D00", 107, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "110 FRANKLIN ST", "PPA", " ", "L", "43", "0", "0", " ", [ null, "37.77534", "-122.420539", null, false ] ]
+, [ 127, "BAE3F3A7-CFFF-4514-AB16-B27AAD91A99D", 127, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1 SHRADER ST", "PPA", " ", "G", "229", "0", "0", " ", [ null, "37.774796", "-122.453051", null, false ] ]
+, [ 128, "2C52FAE2-C339-4CEC-92BF-34CF5B23806A", 128, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2235 HAYES ST", "PPA", " ", "G", "132", "0", "0", " ", [ null, "37.772775", "-122.453021", null, false ] ]
+, [ 129, "4373671E-3DF2-4AB0-8B57-2712A589B89B", 129, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2250 HAYES ST", "PPA", " ", "L", "74", "0", "0", " ", [ null, "37.773491", "-122.453826", null, false ] ]
+, [ 131, "24A5745C-1B10-4E52-ACD5-44B0FF59F964", 131, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1000 VAN NESS AVE", "PPA", " ", "G", "480", "0", "0", " ", [ null, "37.784997", "-122.420162", null, false ] ]
+, [ 151, "F4E140B3-6B6E-4E70-A100-ADB69E78CCF8", 151, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "700 EDDY ST", "PPA", " ", "L", "14", "0", "0", " ", [ null, "37.783236", "-122.419196", null, false ] ]
+, [ 169, "A02EBA4B-70F8-496A-99C0-8F85BB430878", 169, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "29 BRADY ST", "PPA", " ", " ", "268", "0", "0", " ", [ null, "37.773165", "-122.420277", null, false ] ]
+, [ 200, "A7BCC611-D8D8-4A77-8B47-53558DE74B20", 200, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1310 Fillmore Street", "PPA", " ", "G", "112", "0", "0", " ", [ null, "37.78158", "-122.431917", null, false ] ]
+, [ 208, "47F5CD8D-A75C-401C-BC92-8CD9D273794B", 208, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1375 FILLMORE ST", "PPA", "PHO", "G", "200", "0", "10", " ", [ null, "37.781996", "-122.432527", null, false ] ]
+, [ 217, "CDFB8121-907B-4065-BBFA-E85E122BED7B", 217, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "325 GROVE ST", "PHO", " ", " ", "25", "0", "0", " ", [ null, "37.777708", "-122.421777", null, false ] ]
+, [ 229, "4D760B07-A708-4156-94E7-9ACF1E75BCCA", 229, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1750 FULTON ST", "PPA", " ", "G", "240", "0", "0", " ", [ null, "37.776062", "-122.445491", null, false ] ]
+, [ 239, "DAB32E81-869C-47F5-9BBA-1816C2B13C1B", 239, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2190 OFARRELL ST", "PPA", " ", "G", "410", "0", "0", " ", [ null, "37.782429", "-122.440539", null, false ] ]
+, [ 240, "F377C7E6-DF3F-495E-AB65-FA36F6C22248", 240, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2238 GEARY BLVD", "PPA", " ", "G", "366", "0", "0", " ", [ null, "37.783447", "-122.440014", null, false ] ]
+, [ 241, "C794E714-D35A-4D19-8889-9EB61023CF5B", 241, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "4141 GEARY BLVD", "PPA", " ", "G", "328", "0", "0", " ", [ null, "37.780234", "-122.463375", null, false ] ]
+, [ 247, "2D781B42-BD2E-4D11-82F9-6ED0E4028E89", 247, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "11 Oak St", "PPA", "PHO", "L", "30", "10", "0", " ", [ null, "37.775135", "-122.419451", null, false ] ]
+, [ 263, "158AF5BE-B63F-4B2D-862F-64AD63DF1B88", 263, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2299 POST ST", "PPA", " ", " ", "24", "0", "0", " ", [ null, "37.784126", "-122.439158", null, false ] ]
+, [ 266, "D754322B-17E1-4F57-A03A-363E1C66AD46", 266, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "443 DIVISADERO ST", "PPA", " ", "L", "10", "0", "0", " ", [ null, "37.773457", "-122.437617", null, false ] ]
+, [ 272, "2C1AC45A-4341-46DB-A48C-C6BC524DB9D1", 272, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "425 Divisadero St", "PPA", " ", "L", "38", "0", "0", " ", [ null, "37.773319", "-122.43759", null, false ] ]
+, [ 273, "E4A6D4B0-2CE5-4CF1-A968-FA65BA1D08FC", 273, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "680 Stanyan St", "CPO", " ", "L", "38", "0", "0", "grocery", [ null, "37.769407", "-122.453164", null, false ] ]
+, [ 278, "E88C9A5E-881C-4D29-A5D2-DD454AEB80C4", 278, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1800 HAIGHT ST", "PPA", " ", "L", "17", "0", "0", " ", [ null, "37.76951", "-122.451988", null, false ] ]
+, [ 284, "F4FEF0EB-D21D-4B2E-AF48-9CE2CB5EE864", 284, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2144 Market St", "PPA", " ", "L", "19", "0", "0", " ", [ null, "37.767008", "-122.429754", null, false ] ]
+, [ 287, "0BE5BE56-7A4D-4CFD-A5AD-1C5430F5C223", 287, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1635 DIVISADERO ST", "PPA", " ", "G", "538", "0", "0", " ", [ null, "37.784581", "-122.439868", null, false ] ]
+, [ 293, "16C7B3B6-CECB-4FC1-9420-C4F9E1434317", 293, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "750 GOLDEN GATE AVE", "PPA", " ", "L", "50", "25", "0", " ", [ null, "37.78087", "-122.422774", null, false ] ]
+, [ 295, "A6373A41-6825-4BDF-A04C-6C3674C36898", 295, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "98 FRANKLIN ST", "PPA", " ", "L", "74", "0", "0", " ", [ null, "37.775171", "-122.420504", null, false ] ]
+, [ 348, "04E3FCFA-4629-4F24-BA6D-D5243B735057", 348, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFMTA", "1610 Geary Blvd", "PPA", " ", "G", "747", "0", "0", " ", [ null, "37.785053", "-122.430324", null, false ] ]
+, [ 349, "C0B1F432-6C44-4DE6-8293-9E5E945156CD", 349, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFMTA", "1660 Mission Street", "PHO", " ", "G", "59", "0", "0", " ", [ null, "37.771391", "-122.419536", null, false ] ]
+, [ 350, "AA62A72E-840A-4C66-9FB9-B0C44483035D", 350, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFMTA", "1680 Fillmore St", "PPA", " ", "G", "177", "0", "0", " ", [ null, "37.784865", "-122.432591", null, false ] ]
+, [ 362, "A17BF8CF-182B-4429-A6CB-C977DD970EDB", 362, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFMTA", "324 08th Avenue", "PPA", " ", "L", "28", "0", "0", " ", [ null, "37.782328", "-122.466071", null, false ] ]
+, [ 366, "02737233-5D52-49C7-80CB-A15A81DC7396", 366, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFMTA", "330 09th Avenue", "PPA", " ", "L", "23", "0", "0", " ", [ null, "37.782074", "-122.46711", null, false ] ]
+, [ 369, "199EC6F4-C3BF-4CB8-8B8F-8422305E0FFE", 369, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFMTA", "360 Grove Street", "PPA", " ", "G", "618", "0", "0", " ", [ null, "37.778055", "-122.422341", null, false ] ]
+, [ 421, "D0FC1C65-3CFA-4281-9748-971D280E777C", 421, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "400 GROVE ST", "PPA", "PHO", "L", "46", "12", "0", " ", [ null, "37.777949", "-122.423182", null, false ] ]
+, [ 422, "4364DA84-7142-4EDE-B13F-338569E92F1F", 422, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "401 Grove St", "PPA", "PHO", "L", "70", "0", "0", " ", [ null, "37.777543", "-122.423098", null, false ] ]
+, [ 451, "7AA765E9-1347-47BE-BF27-E7D6FDA9D58C", 451, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2130 FULTON ST", "PPA", " ", "G", "770", "0", "0", " ", [ null, "37.775351", "-122.451045", null, false ] ]
+, [ 457, "DC55EAC8-04A3-457F-B283-0ECFA7ADF2CE", 457, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1398 STEVENSON ST", "PPA", " ", "L", "65", "0", "0", " ", [ null, "37.770026", "-122.421668", null, false ] ]
+, [ 458, "6A50B507-B9EA-4D69-83AA-844D69236031", 458, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1399 STEVENSON ST", "PPA", " ", "L", "87", "0", "0", " ", [ null, "37.770058", "-122.42115", null, false ] ]
+, [ 477, "ED86E752-8178-4A21-A98A-66097E0F4BB2", 477, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1280 Laguna St", "PHO", " ", "L", "49", "0", "0", " ", [ null, "37.782785", "-122.427101", null, false ] ]
+, [ 481, "31718C4B-4CA8-4589-AE96-EE97A2E5EF59", 481, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2420 SUTTER ST", "PPA", " ", " ", "80", "0", "0", " ", [ null, "37.785347", "-122.440162", null, false ] ]
+, [ 483, "CA073725-025B-4A5F-9201-B08241578DB2", 483, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "299 Valencia St", "PPA", " ", "L", "30", "0", "0", " ", [ null, "37.768277", "-122.421766", null, false ] ]
+, [ 486, "ED1C843D-39A8-498F-9131-33A252FF7598", 486, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "344 14TH ST", "PPA", " ", "L", "74", "0", "0", " ", [ null, "37.76837", "-122.420812", null, false ] ]
+, [ 495, "3F2DA896-281E-4948-B867-6F321F697972", 495, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "150 Hayes St", "PPA", "PHO", "G", "64", "20", "0", " ", [ null, "37.777549", "-122.418755", null, false ] ]
+, [ 496, "C750F7BB-ECED-476F-BD8A-43F62524352D", 496, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "100 Van Ness Ave", "PPA", "PHO", "G", "130", "40", "0", " ", [ null, "37.776794", "-122.419053", null, false ] ]
+, [ 511, "A9C2E3E6-C890-444D-BCF3-1345BB9A59B0", 511, 1335741454, "401820", 1335741454, "401820", "{\n}", "RPD", "100 Martin Luther King Jr Dr", "CGO", " ", "L", "105", "0", "0", " ", [ null, "37.76738", "-122.46095", null, false ] ]
+, [ 520, "AD9721A6-698E-4489-B0D7-AF3C72BC37F5", 520, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFPD", "751 Stanyan St", "CGO", " ", "L", "45", "0", "0", " ", [ null, "37.767873", "-122.453457", null, false ] ]
+, [ 536, "8E32C380-62B2-41EF-80EC-FC3BFE0A34BD", 536, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "179 Hayes St", "PHO", " ", "G", "40", "0", "0", " ", [ null, "37.777104", "-122.419028", null, false ] ]
+, [ 539, "65D48772-F524-439C-BDE4-7560720CB58A", 539, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1034 Page St", "PHO", " ", "L", "14", "0", "0", " ", [ null, "37.772278", "-122.437715", null, false ] ]
+, [ 540, "26A5D5CE-5028-4657-B6E2-825B69B0E5CD", 540, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1826 Haight St", "PHO", " ", "L", "17", "0", "0", " ", [ null, "37.769086", "-122.452354", null, false ] ]
+, [ 561, "90FB56A8-91A0-4A64-9B3A-5E7DD223A6E6", 561, 1335741454, "401820", 1335741454, "401820", "{\n}", "City College", "45 Gough St", "PHO", " ", "L", "36", "0", "0", " ", [ null, "37.772321", "-122.421278", null, false ] ]
+, [ 563, "1902BD7F-84E9-44B3-B248-3133867E4882", 563, 1335741454, "401820", 1335741454, "401820", "{\n}", "City College", "750 Eddy St", "PHO", " ", "L", "21", "0", "0", " ", [ null, "37.783151", "-122.419864", null, false ] ]
+, [ 567, "B4845C6B-83DF-4D08-85C4-C923A77CB8BC", 567, 1335741454, "401820", 1335741454, "401820", "{\n}", "City College", "1800 Hayes St", "PHO", " ", "L", "67", "0", "0", " ", [ null, "37.774038", "-122.446352", null, false ] ]
+, [ 568, "730E4015-4FBD-4FBC-B160-C2D72FAF7454", 568, 1335741454, "401820", 1335741454, "401820", "{\n}", "City College", "1860 Hayes St", "PHO", " ", "L", "54", "0", "0", " ", [ null, "37.773959", "-122.44709", null, false ] ]
+, [ 586, "B7E834B9-B23F-4F5B-8B83-323B6C3E36D0", 586, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1835 Ellis St", "PHO", " ", "G", "106", "0", "0", " ", [ null, "37.781608", "-122.436198", null, false ] ]
+, [ 588, "53A9DD28-5004-4499-869F-9863A1A76A76", 588, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2130 OFARRELL ST", "PHO", " ", "G", "663", "0", "0", " ", [ null, "37.782519", "-122.439953", null, false ] ]
+, [ 589, "28C591DE-8CF7-4685-9DE7-D3764B26E4E4", 589, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2350 GEARY BLVD", "PHO", " ", "L", "18", "0", "0", " ", [ null, "37.783215", "-122.44182", null, false ] ]
+, [ 590, "496738E7-4828-4580-84B4-AF6E141C5A8C", 590, 1335741454, "401820", 1335741454, "401820", "{\n}", "RPD", "759 Stanyan St", "PHO", " ", "L", "44", "0", "0", " ", [ null, "37.767969", "-122.454502", null, false ] ]
+, [ 606, "52887D31-1640-4E22-A318-47EDE64B194E", 606, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFMTA", "949 Presidio Ave", "PHO", " ", "L", "100", "0", "0", " ", [ null, "37.782636", "-122.446318", null, false ] ]
+, [ 622, "25733B83-B6B5-45FB-A07C-C9E3FEBA8D9C", 622, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "159 Erie St", "PHO", " ", "L", "23", "0", "0", " ", [ null, "37.768839", "-122.419127", null, false ] ]
+, [ 662, "623248D5-EFA3-4E67-ABA0-BDE690CC06B6", 662, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "581 McAllister St", "PHO", " ", "L", "36", "0", "0", " ", [ null, "37.779689", "-122.421256", null, false ] ]
+, [ 665, "D34B2627-DCFF-4B07-BCD2-F82AE7656D71", 665, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "594 Hayes St", "PHO", " ", "L", "20", "0", "0", " ", [ null, "37.776649", "-122.425883", null, false ] ]
+, [ 678, "055E2C16-A7B6-4972-981D-3AFF583778C0", 678, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "809 Franklin St", "PHO", " ", "L", "15", "0", "0", " ", [ null, "37.78177", "-122.422361", null, false ] ]
+, [ 683, "19BF7793-24BC-4264-945F-C37EBD120A3E", 683, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "937 Ofarrell St", "PHO", " ", "L", "9", "0", "0", " ", [ null, "37.784627", "-122.419965", null, false ] ]
+, [ 699, "402AF565-96F8-40B6-AB2C-768D2166D6CD", 699, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "650 MCALLISTER ST", "PHO", " ", "L", "75", "0", "0", " ", [ null, "37.779935", "-122.422582", null, false ] ]
+, [ 701, "FF0A365C-65CB-43CB-90A6-7B6A91009E1D", 701, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "301 Grove St", "PHO", " ", "G", "15", "0", "0", " ", [ null, "37.777749", "-122.421455", null, false ] ]
+, [ 703, "09BAAAA5-D4B9-46CC-B411-44CAD255589D", 703, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "350 Masonic Ave", "PHO", " ", "L", "9", "0", "0", " ", [ null, "37.778122", "-122.446496", null, false ] ]
+, [ 705, "E1C99B01-4C00-4F10-929B-34CF978772B5", 705, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "368 FULTON ST", "PHO", " ", "L", "100", "0", "0", " ", [ null, "37.778975", "-122.422638", null, false ] ]
+, [ 707, "6EC0309A-B198-40DF-AE1A-9514034E02BB", 707, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFPD", "455 06th Ave", "PHO", " ", "L", "40", "0", "0", " ", [ null, "37.77996", "-122.464631", null, false ] ]
+, [ 708, "E12C25FB-023E-468E-9321-9C19918289B4", 708, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "440 Hayes St", "PHO", " ", "L", "50", "0", "0", " ", [ null, "37.776955", "-122.423485", null, false ] ]
+, [ 714, "817EA696-F3CC-4C65-9073-08681BBEA19B", 714, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFUSD", "1512 Golden Gate Ave", "PHO", " ", "L", "26", "0", "0", " ", [ null, "37.779259", "-122.435417", null, false ] ]
+, [ 715, "0280CB1A-6FB1-4C04-B4AB-8E8BCE32030C", 715, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFUSD", "541 McAllister St", "PHO", " ", "L", "96", "0", "0", " ", [ null, "37.779756", "-122.42072", null, false ] ]
+, [ 731, "4BE3022E-1577-4750-A3E0-B65CD3ACE9F9", 731, 1335741454, "401820", 1335741454, "401820", "{\n}", "State of CA", "301 Elm St", "PHO", " ", "L", "30", "0", "0", " ", [ null, "37.781014", "-122.42212", null, false ] ]
+, [ 737, "E70D49CE-5AA5-4543-A3C6-273182B026AA", 737, 1335741454, "401820", 1335741454, "401820", "{\n}", "UCSF", "1701 Divisadero St", "PHO", " ", "G", "80", "0", "0", " ", [ null, "37.785248", "-122.44", null, false ] ]
+, [ 739, "E4666B4A-9240-4F8D-89DA-2E97F98DA9E7", 739, 1335741454, "401820", 1335741454, "401820", "{\n}", "UCSF", "2325 Post St", "PHO", " ", "G", "65", "0", "0", " ", [ null, "37.784034", "-122.439714", null, false ] ]
+, [ 742, "C96AA486-3F40-4CCC-89A3-D8AF5BA1BD53", 742, 1335741454, "401820", 1335741454, "401820", "{\n}", "UCSF", "1930 Market St", "PHO", " ", "L", "8", "0", "0", " ", [ null, "37.770527", "-122.425638", null, false ] ]
+, [ 744, "32BBE6DA-FB75-4C64-9866-211A5D9ABA03", 744, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1939 Market St", "PHO", " ", "L", "20", "0", "0", " ", [ null, "37.76984", "-122.425299", null, false ] ]
+, [ 745, "5F300AEC-C2CA-4C16-BCC1-1A7B3BDCC66D", 745, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "48 Julian St", "PHO", " ", "L", "18", "0", "0", " ", [ null, "37.767362", "-122.421205", null, false ] ]
+, [ 746, "34ED8321-B3F8-4F55-950C-BA91F2EC867C", 746, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "55 Fillmore St", "PHO", " ", "L", "15", "0", "0", " ", [ null, "37.769891", "-122.430241", null, false ] ]
+, [ 747, "806E6727-708C-430F-A3D7-D698C21D6F40", 747, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2130 POST ST", "PHO", " ", "G", "63", "0", "0", " ", [ null, "37.784821", "-122.436788", null, false ] ]
+, [ 750, "6B516EDD-52B1-4267-96C4-FCA0BC65D6AF", 750, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "155 Hermann St", "PHO", " ", "L", "96", "0", "0", " ", [ null, "37.77012", "-122.427703", null, false ] ]
+, [ 751, "0EF069AA-1C8A-4F3B-8591-AF4EBCB955B6", 751, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2450 Turk Blvd", "PHO", " ", "G", "72", "0", "0", " ", [ null, "37.778599", "-122.448297", null, false ] ]
+, [ 752, "C763B651-8394-49AB-A89A-EC3ABC7F2271", 752, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2632 Turk Blvd", "PHO", " ", "G", "23", "0", "0", " ", [ null, "37.778391", "-122.449939", null, false ] ]
+, [ 753, "D0F1749C-BC98-483A-B2F5-ACC175963008", 753, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2901 Turk Blvd", "PHO", " ", "G", "218", "0", "0", " ", [ null, "37.777563", "-122.453251", null, false ] ]
+, [ 756, "3661FD3A-B6F5-44D6-A769-1DEEC4D521FF", 756, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1580 15th St", "PHO", " ", "L", "14", "0", "0", " ", [ null, "37.766861", "-122.419162", null, false ] ]
+, [ 769, "39539B48-3879-4397-9034-EF5D943A3EF1", 769, 1335741454, "401820", 1335741454, "401820", "{\n}", "UCSF", "55 Laguna St", "PHO", " ", "L", "160", "0", "0", " ", [ null, "37.771663", "-122.425703", null, false ] ]
+, [ 770, "4EC7D21E-BECB-4606-B202-179E64AE4F76", 770, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1940 Market St", "PHO", " ", "L", "25", "0", "0", " ", [ null, "37.770135", "-122.425853", null, false ] ]
+, [ 820, "67F1BCC7-2218-40B9-82FF-9B057E8D1C92", 820, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "93 Emerson St", "PHO", " ", "L", "40", "0", "0", " ", [ null, "37.783336", "-122.447678", null, false ] ]
+, [ 821, "70EE5E4D-06D0-4E02-B5ED-670C4536B73A", 821, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Blake St", "PHO", " ", "L", "60", "0", "0", " ", [ null, "37.783333", "-122.451558", null, false ] ]
+, [ 822, "0E263CE9-0D4F-4EDB-8083-19C321567D4A", 822, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Geary", "PHO", " ", "L", "50", "0", "0", " ", [ null, "37.781358", "-122.453223", null, false ] ]
+, [ 823, "71384706-6A0B-4A88-AC90-20F277AF5E28", 823, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Geary", "PHO", " ", "L", "42", "0", "0", " ", [ null, "37.781321", "-122.462539", null, false ] ]
+, [ 824, "0CF1895E-1D84-4771-9286-6E0B41E0C545", 824, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Geary", "PHO", " ", "L", "36", "0", "0", " ", [ null, "37.780754", "-122.462168", null, false ] ]
+, [ 825, "7E73F608-5128-480E-8A7B-DC7E35098CFE", 825, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Geary", "PHO", " ", "L", "70", "0", "0", " ", [ null, "37.780789", "-122.461166", null, false ] ]
+, [ 826, "41904A00-DC1E-4743-8D36-C57FA40FAAFD", 826, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Geary", "PHO", " ", "L", "40", "0", "0", " ", [ null, "37.781434", "-122.460263", null, false ] ]
+, [ 827, "1CB74B33-F6E1-49DA-AD1E-007BCF446181", 827, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "09th Ave", "PHO", " ", "L", "12", "0", "0", " ", [ null, "37.782278", "-122.46698", null, false ] ]
+, [ 828, "17C0E9B2-7034-4AD9-A7D2-6F961C213B17", 828, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "08th Ave", "PHO", " ", "L", "30", "0", "0", " ", [ null, "37.781916", "-122.466616", null, false ] ]
+, [ 841, "30F06FDD-23EC-4254-897F-54D55167AC42", 841, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "69 Page St", "CPO", " ", "L", "10", "0", "0", "religious", [ null, "37.773951", "-122.421251", null, false ] ]
+, [ 848, "0C29A3C7-2E13-4B27-9082-2012A62A5B5B", 848, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "762 FULTON ST", "CPO", " ", "L", "120", "0", "0", "entertainment", [ null, "37.778175", "-122.428913", null, false ] ]
+, [ 859, "8AA423E9-E56E-4D4D-977C-E80B77EB7B11", 859, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1850 Mission St", "CPO", " ", "L", "28", "0", "0", "entertainment", [ null, "37.767397", "-122.419971", null, false ] ]
+, [ 864, "C6DC49B7-8E32-4742-8F15-203E67BC0E1F", 864, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "47 Duboce Ave", "CPO", " ", "L", "24", "0", "0", "retail", [ null, "37.769658", "-122.420855", null, false ] ]
+, [ 867, "8C3E691E-C726-4546-8E75-FC0BF025E79C", 867, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2835 Geary Blvd", "CPO", " ", "L", "39", "0", "0", "service", [ null, "37.781874", "-122.44922", null, false ] ]
+, [ 872, "33CB4A0C-BF58-4880-A532-BDCF1616FB6B", 872, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1326 Grove St", "CPO", " ", "L", "23", "0", "0", "restaurant", [ null, "37.776014", "-122.438362", null, false ] ]
+, [ 885, "D39CA0AC-4859-4989-A8AA-7251325D75CA", 885, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "160 Church St", "CPO", " ", "L", "26", "0", "0", "retail", [ null, "37.768382", "-122.429399", null, false ] ]
+, [ 890, "FF54D664-A5CE-45A2-98A1-0779F38D1221", 890, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "350 Broderick St", "CPO", " ", "G", "80", "0", "0", "retail", [ null, "37.773377", "-122.438738", null, false ] ]
+, [ 896, "6D448D35-E516-4F14-BE96-62ECF7D5A084", 896, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "830 Eddy St", "CPO", " ", "G", "25", "0", "0", "restaurant", [ null, "37.782978", "-122.421236", null, false ] ]
+, [ 917, "6C16F8F6-63E7-4786-8A63-1260145743E3", 917, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "3675 Geary Blvd", "CPO", " ", "L", "6", "0", "0", "automotive", [ null, "37.780955", "-122.45832", null, false ] ]
+, [ 921, "1DC2D226-12C2-49BA-BCFE-429C8CF07683", 921, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1929 Market St", "CPO", " ", "L", "7", "0", "0", "service", [ null, "37.770109", "-122.424905", null, false ] ]
+, [ 922, "3F330DFA-09FB-4832-BCAA-E639D8452C40", 922, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "838 Oak St", "CPO", " ", "L", "14", "0", "0", "religious", [ null, "37.773827", "-122.432992", null, false ] ]
+, [ 926, "2C280DC5-95AE-454F-92E4-D1997920807F", 926, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "4481 Geary Blvd", "CPO", " ", "L", "24", "0", "0", "service", [ null, "37.780578", "-122.466841", null, false ] ]
+, [ 927, "FB8F6A39-0D6B-4538-BC49-9A7726E1C0AA", 927, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2675 Geary Blvd", "CPO", " ", "L", "550", "0", "0", "retail", [ null, "37.781559", "-122.445957", null, false ] ]
+, [ 951, "343E8050-7C78-4BE0-AC16-46FEE299FA85", 951, 1335741454, "401820", 1335741454, "401820", "{\n}", "DMV", "1377 Fell St", "CPO", " ", "L", "142", "0", "0", "government", [ null, "37.773443", "-122.440231", null, false ] ]
+, [ 965, "6FD28DED-A27F-4807-972E-98486C70C7B0", 965, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2800 Geary Blvd", "CPO", " ", "L", "22", "0", "0", "automotive", [ null, "37.782469", "-122.449191", null, false ] ]
+, [ 966, "B9CE14D8-E806-44EB-8EF8-0630E3D5AF2A", 966, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "121 Haight St", "CPO", " ", "L", "14", "0", "0", "religious", [ null, "37.772619", "-122.424322", null, false ] ]
+, [ 968, "97060DBB-01A4-48A3-90A4-BC068C8505F8", 968, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1699 Market St", "CPO", " ", "L", "28", "0", "0", "retail", [ null, "37.772368", "-122.422134", null, false ] ]
+, [ 980, "AB4ED839-EA97-4743-87FB-5ACD0BDC5F1B", 980, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1201 Webster St", "CPO", " ", "L", "71", "0", "0", "religious", [ null, "37.781533", "-122.430695", null, false ] ]
+, [ 1033, "CB955AB4-3CF3-4DAF-BF1E-017BB0D960D9", 1033, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "200 Duboce Ave", "CPO", " ", "L", "6", "0", "0", "restaurant", [ null, "37.769882", "-122.424584", null, false ] ]
+, [ 1037, "A3AFCE65-9EF7-4B63-B6F4-B87F25AF8031", 1037, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1572 Steiner St", "CPO", " ", "L", "13", "0", "0", "restaurant", [ null, "37.783802", "-122.43405", null, false ] ]
+, [ 1038, "21C2B73A-EBE0-4D0C-9C83-094D337B4F00", 1038, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "4190 Geary Blvd", "CPO", " ", "L", "10", "0", "0", "restaurant", [ null, "37.781259", "-122.463955", null, false ] ]
+, [ 1042, "9D97DBAB-6F4E-488F-B193-0B4623211D2E", 1042, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "3825 Geary Blvd", "CPO", " ", "G", "40", "0", "0", "retail", [ null, "37.78083", "-122.46054", null, false ] ]
+, [ 1060, "3A6F0656-EB66-452D-953D-EF547EA80076", 1060, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1889 Haight St", "CPO", " ", "L", "52", "0", "0", "restaurant", [ null, "37.768952", "-122.453003", null, false ] ]
+, [ 1067, "CE3DCF0E-3D82-4613-9AAE-AB69DD730600", 1067, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "570 Golden Gate Ave", "CPO", " ", "L", "20", "0", "0", "restaurant", [ null, "37.781245", "-122.419755", null, false ] ]
+, [ 1071, "A2F8A198-B367-4865-A86D-571D73A1A943", 1071, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "3355 Geary Blvd", "CPO", " ", "L", "49", "0", "0", "restaurant", [ null, "37.781195", "-122.454536", null, false ] ]
+, [ 1094, "694D967C-EF07-4AFA-8BF7-A84710B515A7", 1094, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "900 Franklin St", "CPO", " ", "G", "43", "0", "0", "hotel", [ null, "37.782717", "-122.422027", null, false ] ]
+, [ 1100, "56A06F13-F253-4463-A916-70598A007EC2", 1100, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1050 Van Ness Ave", "CPO", " ", "L", "30", "0", "0", "hotel", [ null, "37.785344", "-122.420829", null, false ] ]
+, [ 1115, "5981B663-8995-430D-8551-8AC4A637D037", 1115, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1975 Market St", "CPO", " ", "L", "10", "0", "0", "retail", [ null, "37.769099", "-122.426187", null, false ] ]
+, [ 1118, "6DF09A77-766F-45EA-A313-4B52C5A20CE3", 1118, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "3535 Geary Blvd", "CPO", " ", "L", "22", "0", "0", "retail", [ null, "37.781026", "-122.456615", null, false ] ]
+, [ 1138, "CC5CA826-6346-4106-BA88-997127FA101B", 1138, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1965 Market St", "CPO", " ", "L", "29", "0", "0", "service", [ null, "37.769465", "-122.425868", null, false ] ]
+, [ 1145, "F454DEE5-27FA-4589-B632-4530F032FA89", 1145, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "860 Eddy St", "CPO", " ", "G", "16", "0", "0", "hotel", [ null, "37.782926", "-122.421639", null, false ] ]
+, [ 1150, "B921FD9A-9F8B-4717-9382-462AFD4C5F3A", 1150, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1391 Webster St", "CPO", " ", "L", "270", "0", "0", "grocery", [ null, "37.783534", "-122.431445", null, false ] ]
+, [ 1152, "D4B3C86A-5CAE-4237-8707-715442B6F725", 1152, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2050 Market St", "CPO", " ", "L", "223", "0", "0", "grocery", [ null, "37.768348", "-122.428196", null, false ] ]
+, [ 1180, "1735E1F6-DE5A-4E38-B7B1-161175E8BFF3", 1180, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "3035 Geary Blvd", "CPO", " ", "L", "5", "0", "0", "automotive", [ null, "37.781609", "-122.451253", null, false ] ]
+, [ 1202, "146C8B2C-5489-4436-8FFF-F6B5577BA3FB", 1202, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1940 Turk St", "CPO", " ", "L", "13", "0", "0", "religious", [ null, "37.779529", "-122.440892", null, false ] ]
+, [ 1204, "66563841-994A-420A-ADC4-C15D16B72E13", 1204, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1111 Gough St", "CPO", " ", "G", "200", "0", "0", "religious", [ null, "37.784623", "-122.425286", null, false ] ]
+, [ 1208, "42D25873-2732-4837-887E-B9E6E887E4C1", 1208, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1025 Masonic St", "CPO", " ", "L", "55", "0", "0", "religious", [ null, "37.771717", "-122.446149", null, false ] ]
+, [ 1210, "83E3BD60-8E49-462F-B96B-5436081554A9", 1210, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2250 Hayes St", "CPO", " ", "L", "111", "0", "0", "medical", [ null, "37.773404", "-122.453119", null, false ] ]
+, [ 1226, "004E8B2E-F590-4368-A648-76FFC49732E0", 1226, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1446 McAllister St", "CPO", " ", "L", "35", "0", "0", "religious", [ null, "37.77827", "-122.435685", null, false ] ]
+, [ 1228, "F0F9D39A-3F59-4620-881B-99CF0379A83B", 1228, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2502 Geary St", "CPO", " ", "L", "7", "0", "0", "restaurant", [ null, "37.78291", "-122.444477", null, false ] ]
+, [ 1230, "7536BB36-82F9-43C6-B868-5B57DEAB430B", 1230, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "3 Masonic Ave", "CPO", " ", "L", "60", "0", "0", "grocery", [ null, "37.783126", "-122.447271", null, false ] ]
+, [ 1234, "8F1CC164-F014-482D-8502-625E55B91FBC", 1234, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "1707 Market St", "CPO", " ", "L", "39", "0", "0", "hotel", [ null, "37.771962", "-122.42213", null, false ] ]
+, [ 1242, "5F92102C-7E3E-432D-A86C-4F0FB548E8CB", 1242, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "901 Fillmore St", "CPO", " ", "L", "31", "0", "0", "religious", [ null, "37.777712", "-122.43166", null, false ] ]
+, [ 1258, "B46F9A05-4A8C-4DA1-ABDC-7EB19E681121", 1258, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2131 Ofarrell", "CPO", " ", "L", "23", "0", "0", "retail", [ null, "37.782131", "-122.439752", null, false ] ]
+, [ 1260, "F42C9490-0D98-43E5-B66E-E258C2348A49", 1260, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "270 Fell Street", "CPO", " ", "G", "15", "0", "0", "retail", [ null, "37.776174", "-122.4221", null, false ] ]
+, [ 1264, "6563B894-DA2E-4308-8F1D-166EE8777239", 1264, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "795 Eddy St", "CPO", " ", "L", "25", "0", "0", "retail", [ null, "37.78267", "-122.420369", null, false ] ]
+, [ 1266, "790FF4DD-5BF5-43F0-AC3D-457355F9646B", 1266, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2145 Market St", "CPO", " ", "G", "30", "0", "0", "retail", [ null, "37.766552", "-122.429423", null, false ] ]
+, [ 1271, "785D39BD-F885-4D0D-9CA3-C33BAD959B82", 1271, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "3670 Geary Blvd", "CPO", " ", "L", "21", "0", "0", "service", [ null, "37.781508", "-122.458328", null, false ] ]
+, [ 1278, "B86E44B4-05AE-47F9-853E-5F6514919A2A", 1278, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2715 Geary Blvd", "CPO", " ", "L", "17", "0", "0", "automotive", [ null, "37.781992", "-122.44805", null, false ] ]
+, [ 1286, "F38E45FE-7720-45D2-992E-571DBB0A6C49", 1286, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "100 Buchanan St", "CPO", " ", "L", "80", "0", "0", " ", [ null, "37.771535", "-122.42642", null, false ] ]
+, [ 1289, "A4A0CC7D-FCDB-4A21-A33A-977C2169DF57", 1289, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "100 Valencia St", "CPO", " ", "L", "6", "0", "0", " ", [ null, "37.771303", "-122.422517", null, false ] ]
+, [ 1313, "29712C90-C6B7-46FD-90C2-DE1A10682E21", 1313, 1335741454, "401820", 1335741454, "401820", "{\n}", "SFPL", "Scott St", "CPO", " ", "L", "20", "0", "0", "retail", [ null, "37.784331", "-122.437409", null, false ] ]
+, [ 1314, "7282FEA9-A0F2-46D0-BDB8-EF3DE0AB7D88", 1314, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2140 Geary Blvd", "CPO", " ", "L", "30", "0", "0", "office", [ null, "37.783849", "-122.438333", null, false ] ]
+, [ 1315, "CE17427C-8622-44E4-8BE4-E73D95FFBAFA", 1315, 1335741454, "401820", 1335741454, "401820", "{\n}", "medical", "Geary", "CPO", " ", "L", "20", "0", "0", " ", [ null, "37.783156", "-122.442183", null, false ] ]
+, [ 1316, "2FDB4D30-81B9-4502-A376-6B35AB730527", 1316, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Masonic", "CPO", " ", "L", "20", "0", "0", "restaurant", [ null, "37.782777", "-122.447215", null, false ] ]
+, [ 1317, "A614ED3B-3F7C-409B-A915-AF79E0D4703C", 1317, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "2700 Geary", "CPO", " ", "L", "20", "0", "0", "office", [ null, "37.782818", "-122.448166", null, false ] ]
+, [ 1318, "AFF668D4-87DC-475E-8305-5B06033248E0", 1318, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Lorraine Ct", "CPO", " ", "L", "42", "0", "0", "religious", [ null, "37.780454", "-122.457133", null, false ] ]
+, [ 1319, "F8EC4B2F-2D93-407A-A8A1-81FA4616BCF4", 1319, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "Stanyan St", "CPO", " ", "L", "18", "0", "0", "retail", [ null, "37.780696", "-122.456292", null, false ] ]
+, [ 1320, "55C73DF3-ABA5-4F60-928B-8A94C35F068B", 1320, 1335741454, "401820", 1335741454, "401820", "{\n}", "Private", "04th Ave", "CPO", " ", "L", "24", "0", "0", "retail", [ null, "37.780531", "-122.461635", null, false ] ]
+, [ 1348, "088F1575-BB3E-4197-8DDE-EF739F7F08F9", 1348, 1335741454, "401820", 1335741454, "401820", "{\n}", "RPD", "200 Bowling Green Dr", "FPA", " ", "L", "45", "0", "0", " ", [ null, "37.768485", "-122.458924", null, false ] ]
+ ]
+}

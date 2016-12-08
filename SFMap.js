@@ -1,23 +1,71 @@
+
+// ----------- Global Data ------------
+var shouldShowIntersections = false,
+    intersectionData,
+    shouldShowParkingMeters = false,
+    parkingMeterData
+
+
+
+
+
+
+
+
 // Create the Google Map…
 function initMap() {
    
 
-    //------------ initializing the map
-    var map = new google.maps.Map(d3.select("#map").node(), {
-        zoom: 12,
-        center: new google.maps.LatLng(37.76487, -122.41948),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        zoomControlOptions: {
-            position: google.maps.ControlPosition.LEFT_TOP,
-        },
-        streetViewControl: false,
-    });
+  
     
     var overlay = new google.maps.OverlayView(),
-        globalData,
         padding = 10,
         pinColor = "75ABBC",
-        searchBoxes = [];
+        searchBoxes = [],
+        getLocation
+
+
+
+    var map = function() {
+
+          //------------ initializing the map
+        var map = new google.maps.Map(d3.select("#map").node(), {
+                zoom: 12,
+                center: new google.maps.LatLng(37.76487, -122.41948),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_TOP,
+                },
+                streetViewControl: false
+            })
+
+
+        // Add the container when the overlay is added to the map.
+        overlay.onAdd = function() {
+            var layer = d3.select(this.getPanes().overlayMouseTarget).append("div")
+                .attr("class", "incidents")
+
+            // Remap data on every resize
+            overlay.draw = function() {
+                setDataSets()
+            }
+        }
+
+        // Bind our overlay to the map…
+        overlay.setMap(map)
+        var that = this
+
+            // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+            for (index in searchBoxes) {
+                searchBoxes[index].setBounds(map.getBounds());
+            }
+        })
+
+       
+        return map
+    }()
+
 
 
     //--------------- creating pins
@@ -32,6 +80,13 @@ function initMap() {
 
 
     // ------ FILTER FUNCTIONALITY ----------
+
+
+    // combine datasets into GLOBAL DATA?
+    // how to differentiate where the data comes from?
+
+    // or switch which data = globalData 
+
 
     // example filter
     var testFilter = function(data) {
@@ -52,11 +107,34 @@ function initMap() {
         }
     };
 
+
+    var setDataSets = function() {
+        var data
+        if (shouldShowIntersections) {
+            data = intersectionData['data']
+            getLocation = Intersection.location
+            drawData(data)
+            addColors(data)
+        } else if (shouldShowParkingMeters) {
+            data = parkingMeterData['data']
+            getLocation = ParkingMeter.location
+            drawData(data)
+        } else {
+            drawData()
+        }
+    }
+
+
+    // eventually add multiple of overlapping layers of data 
     //--------------- mapping data
-    var updateMarkers = function(data) {
+    var drawData = function(data) {
+        if(!data) {
+            d3.select('.incidents').selectAll("svg").remove()
+            return
+        }
 
         var marker = d3.select('.incidents').selectAll("svg")
-            .data(d3.entries(globalData['data']))
+            .data(d3.entries(data))
             .each(transformLocations) // update existing markers
             .enter().append("svg")
             .each(transformLocations)
@@ -68,36 +146,46 @@ function initMap() {
             .attr("cx", padding)
             .attr("cy", padding)
 
-        // need to add an event listener layer to the overlay
+
+        // propagates click events to all markers
+        google.maps.event.addDomListener(marker, 'click', function() {
+            google.maps.event.trigger(this, 'click');
+        });
+
+
         marker.on('click', function() {
-            alert('clicked-' +this)
+            var dataElement = d3.select(this).datum()
+
+            console.log(getLocation(dataElement))
         });
     };
 
+
+    var addColors = function(data) {
+         d3.select('.incidents').selectAll("svg")
+            .data(d3.entries(data))
+            .each(colorScale)
+    }
+
+    var colorScale = function(d) {
+        var min = 1000000,
+            max = 4600000,
+            colorRamp=d3.scale.log().domain([min,max]).range(["white","red"]),
+            color = colorRamp(Intersection.value(d))
+
+        d3.select(this).style('fill', color)
+    }
+
+
     function transformLocations(d) {
-        var colorRamp=d3.scale.log().domain([1000000,4600000]).range(["white","red"]);
-
-        var location = d.value[20],
-            googleLocation = new google.maps.LatLng(location[1], location[2]),
+        var location = getLocation(d),
+            googleLocation = new google.maps.LatLng(location.lat, location.lng),
             mapLocation = overlay.getProjection().fromLatLngToDivPixel(googleLocation)
-            color = colorRamp(d.value[18])
 
-        return d3.select(this)
+        d3.select(this)
             .style("left", (mapLocation.x - padding) + "px")
             .style("top", (mapLocation.y - padding) + "px")
-            .style('fill', color)
     };
-
-
-    function applyFilters() {
-        d3.select('.incidents').selectAll("svg")
-            .data(d3.entries(globalData['data']))
-            .each(visualizeFilterResults); // update existing markers
-        showTotal();
-    };
-
- 
-
 
     //--------------- creating searchboxes
     var createSearchBoxes = function() {
@@ -151,39 +239,77 @@ function initMap() {
             });
             searchBoxes.push(searchBox);
         });
-    }
+    }()
 
-    createSearchBoxes();
+
+
+
+    var listenToCheckboxes = function() {
+        $("input[type='checkbox']").change(function() {
+            $("input[type='checkbox']").each(function(index, element) {
+               
+                if (element.id === 'intersections') {
+                    shouldShowIntersections = element.checked
+                }
+                
+                if (element.id === 'parking-meters') {
+                    shouldShowParkingMeters = element.checked
+                }
+                // repeat for other datasets
+
+            });
+            setDataSets()
+        });
+    }()
 
 
     //------------ initializing the overlay with data 
-    d3.json("data/pedestrian_traffic_at_intersections.json", function(error, data) {
-        if (error) throw error;
 
-        globalData = data;
+    var loadPedestrianIntersectionData = function() {
+        d3.json("data/pedestrian_traffic_at_intersections.json", function(error, data) {
+            if (error) throw error;
+            intersectionData = data;
+        });
+    }()
 
-        // Add the container when the overlay is added to the map.
-        overlay.onAdd = function() {
-            var layer = d3.select(this.getPanes().overlayLayer).append("div")
-                .attr("class", "incidents");
+    var loadParkingMeterData = function() {
+        d3.json("data/parking_meters.json", function(error, data) {
+            if (error) throw error;
+            parkingMeterData = data;
+        });
+    }()
+    
 
-            // Draw each marker as a separate SVG element.
-            overlay.draw = function() {
-                updateMarkers(data)
-            };
-        };
 
-        // Bind our overlay to the map…
-        overlay.setMap(map);
-    });
-
-    // Bias the SearchBox results towards current map's viewport.
-    map.addListener('bounds_changed', function() {
-        for (index in searchBoxes) {
-            searchBoxes[index].setBounds(map.getBounds());
-        }
-    });
 }
+
+// ---------------------------- Data Access Methods ----------------
+
+function Intersection () {}
+Intersection.value = function(d) {
+    return d.value[18]
+}
+
+Intersection.location = function(d) {
+    return {
+        lat: d.value[20][1],
+        lng: d.value[20][2]
+    }
+}
+
+
+function ParkingMeter () {}
+ParkingMeter.location = function(d) {
+    return {
+        lat: d.value[23][1],
+        lng: d.value[23][2]
+    }
+}
+
+
+
+
+
 
 
 

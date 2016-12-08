@@ -18,51 +18,10 @@
     </div>
     <div class="row fill">
         <div class="col s9 fill">
-            <!-- Teal page content  -->
             <div id="map"></div>
-        
-            <div id="container" style="padding-left: 30px; float:left;">
-                <h3> Days of Week Filter </h3>
-                <div class='day-checkbox'>
-                    <input type="checkbox" id="Monday" checked/>
-                    <label for="Monday"></label>
-                    <div class="day-label">Mon.</div>
-                </div>
-                 <div class='day-checkbox' style="float: left">                     
-                    <input type="checkbox" id="Tuesday" checked/>
-                    <label for="Tuesday"></label>
-                    <div class="day-label">Tues.</div>
-                </div>
-                 <div class='day-checkbox' style="float: left">
-                    <input type="checkbox" id="Wednesday" checked/>
-                    <label for="Wednesday"></label>
-                    <div class="day-label">Wed.</div>
-                </div>
-                 <div class='day-checkbox' style="float: left">
-                    <input type="checkbox" id="Thursday" checked/>
-                    <label for="Thursday"></label>
-                     <div class="day-label">Thurs.</div>
-                </div>
-                 <div class='day-checkbox' style="float: left">
-                    <input type="checkbox" id="Friday" checked/>
-                    <label for="Friday"></label>
-                    <div class="day-label">Fri.</div>
-                </div>
-                 <div class='day-checkbox' style="float: left">
-                    <input type="checkbox" id="Saturday" checked/>
-                    <label for="Saturday"></label>
-                    <div class="day-label">Sat.</div>
-                </div>
-                 <div class='day-checkbox' style="float: none">
-                    <input type="checkbox" id="Sunday" checked/>
-                    <label for="Sunday"></label>
-                    <div class="day-label">Sun.</div>
-                </div>
-            </div>
-
         </div>
         <div class="col s3 fill">
-            <!-- Grey navigation panel -->
+            <!-- Google Search Boxes -->
             <form action="#">
                 <h3> Location Selectors </h3>
                 <p>
@@ -77,8 +36,21 @@
                         <input id="pac-input2" class="controls searchbox" type="text" placeholder="Place 2">
                     </div>
                 </p>
-                
             </form>
+
+            <!-- Dataset filters -->
+
+            <div class='row checkbox' style="float: none">
+                <input type="checkbox" id="intersections"/>
+                <label for="intersections"></label>
+                <span class="day-label">Intersections</span>
+            </div>
+            <div class='row checkbox' style="float: none">
+                <input type="checkbox" id="parking-meters"/>
+                <label for="parking-meters"></label>
+                <span class="day-label">Parking Meters</span>
+            </div>
+
         </div>
     </div>
     <script type='text/javascript' src='jquery-1.12.3.min.js'></script>

@@ -2,7 +2,7 @@ html,
 body,
 #map {
     width: 100%;
-    height: 87%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -42,7 +42,7 @@ body,
     float: left;
 }
 
-.day-checkbox {
+.checkbox {
     display: inline;
     width: 50px;
     float: left;
@@ -114,22 +114,4 @@ body,
     opacity: 0.4;
 }
 
-/* SLIDER Classes*/
 
-.slider-track-high.flipped,
-.slider-track-low.flipped {
-    background: blue !important;
-}
-
-.slider-selection {
-    background: blue !important;
-}
-
-.slider-selection.flipped {
-    background-image: linear-gradient(to bottom, #f5f5f5 0%, #f9f9f9 100%) !important;
-}
-
-.selected-time {
-    text-align: center;
-    margin: 5px;
-}
