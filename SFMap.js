@@ -3,7 +3,9 @@
 var shouldShowIntersections = false,
     intersectionData,
     shouldShowParkingMeters = false,
-    parkingMeterData
+    parkingMeterData,
+    shouldShowOffStreetParking = false,
+    offStreetParkingData
 
 
 
@@ -15,14 +17,12 @@ var shouldShowIntersections = false,
 // Create the Google Map…
 function initMap() {
    
-
-  
-    
     var overlay = new google.maps.OverlayView(),
         padding = 10,
         pinColor = "75ABBC",
         searchBoxes = [],
-        getLocation
+        getLocation,
+        getValue
 
 
 
@@ -43,7 +43,7 @@ function initMap() {
         // Add the container when the overlay is added to the map.
         overlay.onAdd = function() {
             var layer = d3.select(this.getPanes().overlayMouseTarget).append("div")
-                .attr("class", "incidents")
+                .attr("class", "data-layer")
 
             // Remap data on every resize
             overlay.draw = function() {
@@ -113,11 +113,17 @@ function initMap() {
         if (shouldShowIntersections) {
             data = intersectionData['data']
             getLocation = Intersection.location
+            getValue = Intersection.value
             drawData(data)
             addColors(data)
         } else if (shouldShowParkingMeters) {
             data = parkingMeterData['data']
             getLocation = ParkingMeter.location
+            drawData(data)
+        } else if (shouldShowOffStreetParking) {
+            data = offStreetParkingData['data']
+            getLocation = OffStreetParking.location
+            getValue = OffStreetParking.value
             drawData(data)
         } else {
             drawData()
@@ -129,11 +135,11 @@ function initMap() {
     //--------------- mapping data
     var drawData = function(data) {
         if(!data) {
-            d3.select('.incidents').selectAll("svg").remove()
+            d3.select('.data-layer').selectAll("svg").remove()
             return
         }
 
-        var marker = d3.select('.incidents').selectAll("svg")
+        var marker = d3.select('.data-layer').selectAll("svg")
             .data(d3.entries(data))
             .each(transformLocations) // update existing markers
             .enter().append("svg")
@@ -162,7 +168,7 @@ function initMap() {
 
 
     var addColors = function(data) {
-         d3.select('.incidents').selectAll("svg")
+         d3.select('.data-layer').selectAll("svg")
             .data(d3.entries(data))
             .each(colorScale)
     }
@@ -187,7 +193,11 @@ function initMap() {
             .style("top", (mapLocation.y - padding) + "px")
     };
 
-    //--------------- creating searchboxes
+
+
+
+
+//--------------- Setting up UI elements: checkboxes, searchboxes, etc -----------------
     var createSearchBoxes = function() {
 
         $('.searchbox').each(function() {
@@ -255,6 +265,10 @@ function initMap() {
                 if (element.id === 'parking-meters') {
                     shouldShowParkingMeters = element.checked
                 }
+
+                if (element.id === 'off-street-parking') {
+                    shouldShowOffStreetParking = element.checked
+                }
                 // repeat for other datasets
 
             });
@@ -263,7 +277,7 @@ function initMap() {
     }()
 
 
-    //------------ initializing the overlay with data 
+//------------ loading all the data 
 
     var loadPedestrianIntersectionData = function() {
         d3.json("data/pedestrian_traffic_at_intersections.json", function(error, data) {
@@ -279,6 +293,12 @@ function initMap() {
         });
     }()
     
+    var loadOffStreetParkingData = function() {
+        d3.json("data/off_street_parking.json", function(error, data) {
+            if (error) throw error;
+            offStreetParking = data;
+        });
+    }()
 
 
 }
@@ -303,6 +323,17 @@ ParkingMeter.location = function(d) {
     return {
         lat: d.value[23][1],
         lng: d.value[23][2]
+    }
+}
+
+function OffStreetParking () {}
+OffStreetParking.value = function(d) {
+    return d[13]
+}
+OffStreetParking.location = function(d) {
+    return {
+        lat: d[17][1],
+        lng: d[17][2]
     }
 }
 
