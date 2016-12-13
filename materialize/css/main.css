@@ -10,6 +10,7 @@ body,
 .data-layer,
 .data-layer svg {
     position: absolute;
+    opacity: .8;
 }
 
 .wide {
