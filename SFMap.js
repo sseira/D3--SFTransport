@@ -39,7 +39,7 @@ function initMap() {
             // Remap data on every resize
             overlay.draw = function() {
                 zoomLvl = map.getZoom()
-                console.log(zoomLvl)
+                // console.log(zoomLvl)
                 drawAllData()
             }
         }
@@ -219,8 +219,8 @@ function initMap() {
             var classObj = currentClassObj
             var dataElement = d3.select(this).datum()
 
-            console.log(getLocation(dataElement))
-            console.log(getValue(dataElement))
+            // console.log(getLocation(dataElement))
+            // console.log(getValue(dataElement))
         });
     };
 
